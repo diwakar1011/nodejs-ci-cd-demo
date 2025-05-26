@@ -24,7 +24,10 @@ jobs:
         run: npm test
 
       - name: Build Docker image
-        run:  docker build -t nodejs-ci-cd-demo .
+        run:  docker build -t nodejs-ci-cd-demo 
+
+        -name: check username  (debug only)
+        -run: echo "docker username is: ${{ secrets.docker_username }}"
 
 
 
