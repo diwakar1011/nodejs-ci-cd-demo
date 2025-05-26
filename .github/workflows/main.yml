@@ -29,7 +29,7 @@ jobs:
 
 
       - name: Login to DockerHub
-        run: echo "${{ secrets.DOCKER_PASSWOARD }}" | docker login -u " ${{ secrets.DOCKER_USERNAME }} " --password-stdin
+        run: echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u " ${{ deepak215 }} " --password-stdin
 
       - name: Push Docker image
         run: docker push  ${{ secrets.DOCKER_USERNAME }}/nodejs-ci-cd-demo
