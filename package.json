@@ -1,0 +1,11 @@
+{
+  "name": "nodejs-ci-cd-demo",
+  "version": "1.0.0",
+  "description": "Simple Node.js app for CI/CD demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Running tests...\" && exit 0"
+  },
+  "author": "Student",
+  "license": "ISC"
+}
