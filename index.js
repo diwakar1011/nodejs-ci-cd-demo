@@ -1,1 +1,1 @@
-console.log("Hello from Node.js CI/CD Demo App!");//test
+console.log('Hello from Node.js CI/CD Demo App!') //test
