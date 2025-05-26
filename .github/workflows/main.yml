@@ -24,15 +24,12 @@ jobs:
         run: npm test
 
       - name: Build Docker image
-        run:  docker build -t nodejs-ci-cd-demo 
-
-        -name: check username  (debug only)
-        -run: echo "docker username is: ${{ secrets.docker_username }}"
+        run:  docker build -t deepak215/nodejs-ci-cd-demo  .  
 
 
 
       - name: Login to DockerHub
-        run: echo "${{ secrets.docker_password }}" | docker login -u " ${{ secrets.docker_username }} " --password-stdin
+        run: echo "${{ secrets.DOCKER_PASSWOARD }}" | docker login -u " ${{ secrets.DOCKER_USERNAME }} " --password-stdin
 
       - name: Push Docker image
-        run: docker push ${{ secrets.docker_username }}/nodejs-ci-cd-demo
+        run: docker push deepak215/nodejs-ci-cd-demo
